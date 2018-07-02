@@ -1,0 +1,60 @@
+// Bootstrap Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Bootstrap Optional
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/alert";
+
+form {
+    &.needs-validation {
+        input.form-control {
+            &:not([type='submit']):not([type='file']):not([type='select']):not([type='checkbox']):not([type='radio']) {
+                padding-right: 40px !important;
+            }
+        }
+
+        .form-group, .form-input {
+            position: relative;
+        }
+    }
+
+    &.was-validated {
+
+        #form-errors svg {
+            position: relative;
+            top: auto;
+            right: auto;
+            width: auto;
+        }
+
+        .form-group {
+            svg {
+                &.valid-feedback, &.invalid-feedback {
+                    font-size: 18px;
+                }
+            }
+    
+            svg {
+                position: absolute;
+                top: 11px;
+                right: 12px;
+                width: 18px;    
+            }  
+
+            &.has-label {
+                svg {
+                    top: 38px;
+                }
+            }
+        }
+
+      
+    }
+}
